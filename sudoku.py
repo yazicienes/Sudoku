@@ -1,5 +1,5 @@
 import pygame
-import requests #for get request to sudoku api
+import requests #for get request to sudoku api, first need python -m pip install requests
 
 #constants
 WIDTH = 550
@@ -34,7 +34,7 @@ def main():
         for j in range(0, len(grid[0])):
             if (0<grid[i][j] <10):
                 value = myfont.render(str(grid[i][j]), True, BLUE)
-                win.blit(value, (j+1)*50+15, (i+1)*50+15)
+                win.blit(value, ((j+1)*50+15, (i+1)*50+15))
 
     while True:
         for event in pygame.event.get():
